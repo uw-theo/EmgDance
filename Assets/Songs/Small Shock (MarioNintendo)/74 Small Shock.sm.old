@@ -1,0 +1,31 @@
+#TITLE:;
+#SUBTITLE:;
+#ARTIST:;
+#CREDIT:;
+#MUSIC:74 Small Shock.mp3;
+#SELECTABLE:YES;
+#BACKGROUND:;
+#BANNER:;
+#CDTITLE:;
+#OFFSET:-0.0580499;
+#SAMPLESTART:0.000;
+#SAMPLELENGTH:0.000;
+#BPMS:0=109.957,1=20.2665,2=109.957,3=20.1088,4=107.666,5=20.2665,6=101.333;
+#STOPS:;
+//---------------dance-single - ----------------
+#NOTES:
+     dance-single:
+     :
+     Beginner:
+     1:
+     0.000,0.000,0.000,0.000,0.000:
+0202
+0303
+0022
+0033
+,
+0202
+0303
+0022
+0033
+;
