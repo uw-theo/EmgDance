@@ -109,7 +109,7 @@ public class GameManager : MonoBehaviour
                 upHitText.text = upHits.ToString() + "/" + totalUpNotes.ToString();
                 rightHitText.text = rightHits.ToString() + "/" + totalRightNotes.ToString();
                 worstGestureText.text = CalculateWorstGesture();
-                // TODO: Temp debug
+
                 // Debug.Log("FinalScore: " + finalsScoreText.text);
                 // Debug.Log("totalHit: " + totalHitText.text);
                 // Debug.Log("leftHit: " + leftHitText.text);
@@ -392,7 +392,7 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(waitTime);
         Debug.Log("10 second wait end");
 
-        // destroy hub object
+        // destroy hub object to prevent duplicates
         GameObject myoHubObject = GameObject.Find("Hub - 1 Myo");
         Destroy(myoHubObject);
 
