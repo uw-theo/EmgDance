@@ -358,18 +358,19 @@ public class GameManager : MonoBehaviour
             }
         }
 
+        // find first min value
         if (minIdx == 0)
         {
-            retVal = retVal + "left(" + leftHitPercent.ToString("F2") + "%)";
+            retVal = retVal + "RDorsiflexion(" + leftHitPercent.ToString("F2") + "%)";
         } else if (minIdx == 1)
         {
-            retVal = retVal + "down(" + downHitPercent.ToString("F2") + "%)";
+            retVal = retVal + "LPlantarflexion(" + downHitPercent.ToString("F2") + "%)";
         } else if (minIdx == 2)
         {
-            retVal = retVal + "up(" + upHitPercent.ToString("F2") + "%)";
+            retVal = retVal + "LDorsiflexion(" + upHitPercent.ToString("F2") + "%)";
         } else if (minIdx == 3)
         {
-            retVal = retVal + "right(" + rightHitPercent.ToString("F2") + "%)";
+            retVal = retVal + "RPlantarflexion(" + rightHitPercent.ToString("F2") + "%)";
         } else
         {
             Debug.Log("ERROR: invalid worst gesture index");

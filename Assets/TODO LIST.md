@@ -1,4 +1,6 @@
+========================================
 GAME TODO LIST
+========================================
 Misc links that might be helpful
 https://github.com/balandinodidonato/MyoToolkit/blob/master/Software%20for%20Thalmic%27s%20Myo%20armband.md
 https://github.com/thalmiclabs/myo-unity/blob/master/project/Assets/Myo%20Samples/Scripts/JointOrientation.cs
@@ -59,14 +61,20 @@ https://github.com/NiklasRosenstein/myo-python/releases/tag/v1.0.4
         need to add in "Songs" folder with "Goin' Under" song
         need to add in "UserProfiles" folder
     MonoBleedingEdge folder
-[]20. Cleanup the code, rename the project, etc. Get this thing finalized!!!
+[X]21. Clean up the file output for othe CSV, still says "left" or "right" for worst gesture. Maybe clean up the 
+    logic on how it decides worst gesture, i.e. what happens for a tie? 
+[]99. Cleanup the code, rename the project, etc. Get this thing finalized!!!
 
 Immediate Goal: 
 items 9, 19, 11, 13, 15, 20
-final code clean up and refactor phase. Get ready for actual test subjects ASAP. 
+final code clean up and refactor phase. Get ready for actual test subjects ASAP. Goal is 8 subjects!
 
-
+========================================
 PAPER TODO LIST
+========================================
+References: 
+https://www.uwb.edu/stem/graduate/mscsse/advising/thesis-project-process
+
 Overall goal: 
 i want to create a platform that can be used as a basis for future experiements.
 to run this experiment on healthy patients first so that i can learn things abouts useability that would affect amputees. 
@@ -76,17 +84,18 @@ introduce with "advances in VR, semg, etc technologies?
 introduce with what is PLP and how we want to hit that? 
 introduce with statistics about upper vs lower limb
 
-abstract should begin with a brief statemtn of the problem or issue, followed by a description of the research method and design, the major findings, and the conclusions reached. 
+abstract should begin with a brief statement of the problem or issue, followed by a description of the research method and design, the major findings, and the conclusions reached. 
 1. a clear statement of the topic of the paper and a little motivation
 2. a bit of an intro to draw a reader into wanting to know more
 3. a clear and precise statement of what the paper is going to cover
 4. a concise summary of the results of the analysis and the main conclusions
 
-
+========================================
 Deadlines:
+========================================
 checklist: https://grad.uw.edu/current-students/enrollment-through-graduation/graduation-requirements/
 
-1. Two weeks before the defense, submit the title and abstract to the School of STEM Office of Graduate Studies to post on the Final Examination & Defense schedule.
+1. Two weeks before the defense, submit the **title and abstract** to the School of STEM Office of Graduate Studies to post on the Final Examination & Defense schedule.At this point a final draft should also be sent out for committee to review so that we give 2 weeks for committee to complete review. 
     title page
     copyright page
     abstract
