@@ -1,4 +1,4 @@
-#define SIMULATE_MYO
+// #define SIMULATE_MYO
 
 using System;
 using System.Collections;
