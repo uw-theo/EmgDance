@@ -992,7 +992,7 @@ GameObject:
   - component: {fileID: 749890152}
   - component: {fileID: 749890153}
   m_Layer: 0
-  m_Name: LeftMyo
+  m_Name: SecondMyo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1025,9 +1025,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 917262f8ecbe7423583085eb03acfbb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  firstFirmware: {x: 0, y: 0, z: 0}
+  secondFirmware: {x: 0, y: 0, z: 0}
   armSynced: 0
   unlocked: 0
-  arm: 1
+  arm: 2
   xDirection: 1
   pose: 65535
   accelerometer: {x: 0, y: 0, z: 0}
@@ -1122,7 +1124,7 @@ GameObject:
   - component: {fileID: 992241231}
   - component: {fileID: 992241232}
   m_Layer: 0
-  m_Name: RightMyo
+  m_Name: FirstMyo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1155,9 +1157,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 917262f8ecbe7423583085eb03acfbb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  firstFirmware: {x: 0, y: 0, z: 0}
+  secondFirmware: {x: 0, y: 0, z: 0}
   armSynced: 0
   unlocked: 0
-  arm: 0
+  arm: 2
   xDirection: 1
   pose: 65535
   accelerometer: {x: 0, y: 0, z: 0}

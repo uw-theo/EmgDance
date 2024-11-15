@@ -134,25 +134,23 @@ public class NoteObject : MonoBehaviour
         myoHubObject.SetActive(true);
 
         List<ThalmicMyo> _myos = new List<ThalmicMyo>();
-        for (int i = 0; i < myoHubObject.transform.childCount; ++i) 
-        {
-            Transform child = myoHubObject.transform.GetChild (i);
+        GameObject firstMyoGameObject  = GameObject.Find("FirstMyo");
+        ThalmicMyo firstMyo = firstMyoGameObject.GetComponent<ThalmicMyo>();
+        _myos.Add(firstMyo);
+        GameObject secondMyoGameObject = GameObject.Find("SecondMyo");
+        ThalmicMyo secondMyo = secondMyoGameObject.GetComponent<ThalmicMyo>();
+        _myos.Add(secondMyo);
 
-            var myo = child.gameObject.GetComponent<ThalmicMyo> ();
-            if (myo != null) 
-            {
-                _myos.Add(myo);
-            }
-        }
-
-        if (_myos[0].firstFirmware.Z == 1931)
+        if (_myos[0].firstFirmware.z == 1931)
         {
+            // Debug.Log("myo[0] is the left");
             leftThalmicMyo = _myos[0];
             leftThalmicMyo.arm = Arm.Left;
             rightThalmicMyo = _myos[1];
             rightThalmicMyo.arm = Arm.Right;
-        } else if (_myos[0].firstFirmware.Z == 1970)
+        } else if (_myos[0].firstFirmware.z == 1970)
         {
+            // Debug.Log("myo[0] is the right");
             rightThalmicMyo = _myos[0];
             rightThalmicMyo.arm = Arm.Right;
             leftThalmicMyo = _myos[1];

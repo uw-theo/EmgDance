@@ -146,10 +146,10 @@ public class ThalmicHub : MonoBehaviour
         firstFirmwareVer = _hub.GetFirstFirmwareVer();
         secondFirmwareVer = _hub.GetSecondFirmwareVer();
 
-        Debug.Log("ThalmicHub.cs firstFirmware ver: " + 
-            firstFirmwareVer.X + "." + firstFirmwareVer.Y + "." + firstFirmwareVer.Z);
-        Debug.Log("ThalmicHub.cs secondFirmware ver: " + 
-            secondFirmwareVer.X + "." + secondFirmwareVer.Y + "." + secondFirmwareVer.Z);
+        // Debug.Log("ThalmicHub.cs firstFirmware ver: " + 
+        //     firstFirmwareVer.X + "." + firstFirmwareVer.Y + "." + firstFirmwareVer.Z);
+        // Debug.Log("ThalmicHub.cs secondFirmware ver: " + 
+        //     secondFirmwareVer.X + "." + secondFirmwareVer.Y + "." + secondFirmwareVer.Z);
 
         // both have a 1 major firmware version
         if(firstFirmwareVer.X == 1 &&
@@ -164,20 +164,34 @@ public class ThalmicHub : MonoBehaviour
                 {
                     // Debug.Log("myo0 = left and myo1 = right");
                     _myos[0].arm = Thalmic.Myo.Arm.Left;
+                    _myos[0].firstFirmware.Set(firstFirmwareVer.X, firstFirmwareVer.Y, firstFirmwareVer.Z);
+                    _myos[0].secondFirmware.Set(secondFirmwareVer.X, secondFirmwareVer.Y, secondFirmwareVer.Z);
+
                     _myos[1].arm = Thalmic.Myo.Arm.Right;
-                    _myos[0].firstFirmware = firstFirmwareVer;
-                    _myos[1].secondFirmware = secondFirmwareVer;
+                    _myos[1].firstFirmware.Set(firstFirmwareVer.X, firstFirmwareVer.Y, firstFirmwareVer.Z);
+                    _myos[1].secondFirmware.Set(secondFirmwareVer.X, secondFirmwareVer.Y, secondFirmwareVer.Z);
+                    // _myos[0].firstFirmware = firstFirmwareVer;
+                    // _myos[1].secondFirmware = secondFirmwareVer;
                 } else if (firstFirmwareVer.Z == 1970) {
                     // Debug.Log("myo0 = right and myo1 = left");
                     _myos[0].arm = Thalmic.Myo.Arm.Right;
+                    _myos[0].firstFirmware.Set(firstFirmwareVer.X, firstFirmwareVer.Y, firstFirmwareVer.Z);
+                    _myos[0].secondFirmware.Set(secondFirmwareVer.X, secondFirmwareVer.Y, secondFirmwareVer.Z);
+
                     _myos[1].arm = Thalmic.Myo.Arm.Left;
-                    _myos[0].secondFirmware = secondFirmwareVer;
-                    _myos[1].firstFirmware = firstFirmwareVer;
+                    _myos[1].firstFirmware.Set(firstFirmwareVer.X, firstFirmwareVer.Y, firstFirmwareVer.Z);
+                    _myos[1].secondFirmware.Set(secondFirmwareVer.X, secondFirmwareVer.Y, secondFirmwareVer.Z);
+                    // _myos[0].secondFirmware = secondFirmwareVer;
+                    // _myos[1].firstFirmware = firstFirmwareVer;
                 } else{
                     Debug.Log("Invalid firmware version in thalmichub.cs");
                 }
             }
         }
+        Debug.Log("ThalmicHub.cs firstFirmware ver: " + 
+            _myos[0].secondFirmware.x + "." + _myos[0].secondFirmware.y + "." + _myos[0].secondFirmware.z);
+        Debug.Log("ThalmicHub.cs secondFirmware ver: " + 
+            _myos[1].firstFirmware.x + "." + _myos[1].firstFirmware.y + "." + _myos[1].firstFirmware.z);
 
         // vibrate the Myo to signify which one is the left and which one is the right
         // the left has a short vibrate

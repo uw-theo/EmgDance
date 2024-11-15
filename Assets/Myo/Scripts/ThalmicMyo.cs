@@ -13,6 +13,9 @@ using UnityEngine.InputSystem;
 // coordinate system conventions (the y axis is up, the z axis is forward, and the coordinate system is left-handed).
 public class ThalmicMyo : MonoBehaviour {
 
+    public Vector3 firstFirmware;// = new Vector3(0f, 0f, 0f);
+    public Vector3 secondFirmware;// = new Vector3(0f, 0f, 0f);
+
     // True if and only if Myo has detected that it is on an arm.
     public bool armSynced;
 
@@ -71,7 +74,7 @@ public class ThalmicMyo : MonoBehaviour {
     void Update() {
         lock (_lock) {
             armSynced = _myoArmSynced;
-            arm = _myoArm;
+            // arm = _myoArm;
             xDirection = _myoXDirection;
             if (_myoQuaternion != null) {
                 transform.localRotation = new Quaternion(_myoQuaternion.Y, _myoQuaternion.Z, -_myoQuaternion.X, -_myoQuaternion.W);
@@ -176,8 +179,5 @@ public class ThalmicMyo : MonoBehaviour {
     private Thalmic.Myo.Vector3 _myoGyroscope = null;
     private Pose _myoPose = Pose.Unknown;
     private bool _myoUnlocked = false;
-    public Thalmic.Myo.Vector3 firstFirmware = null;
-    public Thalmic.Myo.Vector3 secondFirmware = null;
-
     private Thalmic.Myo.Myo _myo;
 }
